@@ -1,212 +1,145 @@
-﻿<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
-    <style type="text/css">
-body{ font-size:17px; line-height:50px;background-color:#FFFFFF;}
-.middel {
-	text-align:center;
-margin:auto;
-}
-.rowtop1{
- 	line-height:52px;
-	height:54px;
-	width:240px;
-	color:#ffffff;
-	background-color:#009688;
-	font-size:16px;
-	font-weight:550;
-	font-family:Arial;
-	border:0px solid #dcdcdc;
-	-webkit-border-top-left-radius:3px;
-	-moz-border-radius-topleft:3px;
-	border-top-left-radius:3px;
-	-webkit-border-top-right-radius:3px;
-	-moz-border-radius-topright:3px;
-	border-top-right-radius:3px;
-	-webkit-border-bottom-left-radius:3px;
-	-moz-border-radius-bottomleft:3px;
-	border-bottom-left-radius:3px;
-	-webkit-border-bottom-right-radius:3px;
-	-moz-border-radius-bottomright:3px;
-	border-bottom-right-radius:3px;
-	-moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
-	-webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
-	box-shadow: inset 0px 0px 0px 0px #ffffff;
-	text-align:center;
-	display:inline-block;
-	text-decoration:none;
-	margin-bottom:20px;
-
-}
-.rowtop1:hover {
-	background-color:#1c9439;
-}
-
-
-
-.rowtop{
-  line-height:52px;
-  height:54px;
-  width:240px;
-  color:#00BCD4;
-  background-color:#777777;
-  font-size:17px;
-  font-weight:550;
-  font-family:Arial;
-  background:-webkit-gradient(linear, left top, left bottom, color-start(0.05, #ededed), color-stop(1, #f5f5f5));
-  background:-moz-linear-gradient(top, #ededed 5%, #f5f5f5 100%);
-  background:-o-linear-gradient(top, #ededed 5%, #f5f5f5 100%);
-  background:-ms-linear-gradient(top, #ededed 5%, #f5f5f5 100%);
-  background:linear-gradient(to bottom, #ededed 5%, #f5f5f5 100%);
-  background:-webkit-linear-gradient(top, #ededed 5%, #f5f5f5 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#f5f5f5',GradientType=0);
-  border:1px solid #dcdcdc;
-  -webkit-border-top-left-radius:6px;
-  -moz-border-radius-topleft:6px;
-  border-top-left-radius:6px;
-  -webkit-border-top-right-radius:6px;
-  -moz-border-radius-topright:6px;
-  border-top-right-radius:6px;
-  -webkit-border-bottom-left-radius:6px;
-  -moz-border-radius-bottomleft:6px;
-  border-bottom-left-radius:6px;
-  -webkit-border-bottom-right-radius:6px;
-  -moz-border-radius-bottomright:6px;
-  border-bottom-right-radius:6px;
-  -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
-  -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
-  box-shadow: inset 0px 0px 0px 0px #ffffff;
-  text-align:center;
-  display:inline-block;
-  text-decoration:none;
-  margin-bottom:20px;
-}
-.rowtop:hover{
-  background-color:#f5f5f5;
-  background:-webkit-gradient(linear, left top, left bottom, color-start(0.05, #f5f5f5), color-stop(1, #ededed));
-  background:-moz-linear-gradient(top, #f5f5f5 5%, #ededed 100%);
-  background:-o-linear-gradient(top, #f5f5f5 5%, #ededed 100%);
-  background:-ms-linear-gradient(top, #f5f5f5 5%, #ededed 100%);
-  background:linear-gradient(to bottom, #f5f5f5 5%, #ededed 100%);
-  background:-webkit-linear-gradient(top, #f5f5f5 5%, #ededed 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#ededed',GradientType=0);
-}
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>three.js - particles - random</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+		<style type="text/css">
+			body {
+				background: url(img/bg1.jpg) no-repeat;
+				background-size: cover;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body onload="init()">
+	<audio autoplay="autoplay"  loop="loop">
+		<source src="img/ILoveYou.mp3" >
+	</audio>
+	<script type="text/javascript" src="js/ThreeCanvas.js"></script>
+	<script type="text/javascript" src="js/Snow.js"></script>
+	
+		<script>
+
+			var SCREEN_WIDTH = window.innerWidth;
+			var SCREEN_HEIGHT = window.innerHeight;
+
+			var container;
+
+			var particle;
+
+			var camera;
+			var scene;
+			var renderer;
+
+			var mouseX = 0;
+			var mouseY = 0;
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			
+			var particles = []; 
+			var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
+			particleImage.src = 'img/ParticleSmoke.png'; 
+
+		
+		
+			function init() {
+
+				container = document.createElement('div');
+				document.body.appendChild(container);
+
+				camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+				scene.add(camera);
+					
+				renderer = new THREE.CanvasRenderer();
+				renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+				var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+					
+				for (var i = 0; i < 500; i++) {
+
+					particle = new Particle3D( material);
+					particle.position.x = Math.random() * 2000 - 1000;
+					particle.position.y = Math.random() * 2000 - 1000;
+					particle.position.z = Math.random() * 2000 - 1000;
+					particle.scale.x = particle.scale.y =  1;
+					scene.add( particle );
+					
+					particles.push(particle); 
+				}
+
+				container.appendChild( renderer.domElement );
+
+	
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+				
+				setInterval( loop, 1000 / 60 );
+				
+			}
+			
+			function onDocumentMouseMove( event ) {
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+			}
+
+			function onDocumentTouchStart( event ) {
+
+				if ( event.touches.length == 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
 
+			function onDocumentTouchMove( event ) {
 
-</style>
+				if ( event.touches.length == 1 ) {
 
+					event.preventDefault();
 
-    <title>视频直播·</title>
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
 
-</head>
-<body>
+			//
 
+			function loop() {
 
+			for(var i = 0; i<particles.length; i++)
+				{
 
+					var particle = particles[i]; 
+					particle.updatePhysics(); 
+	
+					with(particle.position)
+					{
+						if(y<-1000) y+=2000; 
+						if(x>1000) x-=2000; 
+						else if(x<-1000) x+=2000; 
+						if(z>1000) z-=2000; 
+						else if(z<-1000) z+=2000; 
+					}				
+				}
+			
+				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+				camera.lookAt(scene.position); 
 
-<div class='middel'>
-    <a href="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"  class='rowtop1'>CCTV-1高清</a>
+				renderer.render( scene, camera );
 
-    <a href="http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8"  class='rowtop'>CCTV-3高清</a>
+				
+			}
 
-    <a href="http://ivi.bupt.edu.cn/hls/cctv5hd.m3u8"  class='rowtop1'>CCTV-5高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv5phd.m3u8"  class='rowtop'>CCTV-5+高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8"  class='rowtop1'>CCTV-6高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv8hd.m3u8"  class='rowtop'>CCTV-8高清</a>
-
-  <a href="http://ivi.bupt.edu.cn/hls/chchd.m3u8"  class='rowtop1'>CHC高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/btv1hd.m3u8"  class='rowtop'>北京卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/hunanhd.m3u8"  class='rowtop1'>湖南卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/zjhd.m3u8"  class='rowtop'>浙江卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/jshd.m3u8"  class='rowtop1'>江苏卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/dfhd.m3u8"  class='rowtop'>东方卫视高清</a>
-
-<a href="http://ivi.bupt.edu.cn/hls/ahhd.m3u8"  class='rowtop1'>安徽卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/hljhd.m3u8"  class='rowtop'>黑龙江卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/lnhd.m3u8"  class='rowtop1'>辽宁卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/szhd.m3u8"  class='rowtop'>深圳卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/gdhd.m3u8"  class='rowtop1'>广东卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/tjhd.m3u8"  class='rowtop'>天津卫视高清</a>
-
-<a href="http://ivi.bupt.edu.cn/hls/cqhd.m3u8"  class='rowtop1'>重庆卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv2.m3u8"  class='rowtop'>CCTV2卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv3.m3u8"  class='rowtop1'>CCTV3卫视高清</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv7.m3u8"  class='rowtop'>CCTV7卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv8.m3u8"  class='rowtop1'>CCTV8电视剧</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv9.m3u8"  class='rowtop'>CCTV9卫视高清</a>
-
-<a href="http://ivi.bupt.edu.cn/hls/cctv10.m3u8"  class='rowtop1'>CCTV10科教</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv12.m3u8"  class='rowtop'>CCTV12社会与法</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv13.m3u8"  class='rowtop1'>CCTV13新闻</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv14.m3u8"  class='rowtop'>CCTV14少儿</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/cctv15.m3u8"  class='rowtop1'>CCTV15音乐</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/btv4.m3u8"  class='rowtop'>北京影视</a>
-
-<a href="http://ivi.bupt.edu.cn/hls/hntv.m3u8"  class='rowtop1'>河南卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/sxtv.m3u8"  class='rowtop'>陕西卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/jltv.m3u8"  class='rowtop1'>吉林卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/sdtv.m3u8"  class='rowtop'>山东卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/hbtv.m3u8"  class='rowtop1'>湖北卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/gxtv.m3u8"  class='rowtop'>广西卫视</a>
-<a href="http://ivi.bupt.edu.cn/hls/hbtv.m3u8"  class='rowtop1'>河北卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/xztv.m3u8"  class='rowtop'>西藏卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/nmtv.m3u8"  class='rowtop1'>内蒙古卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/qhtv.m3u8"  class='rowtop'>青海卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/sctv.m3u8"  class='rowtop1'>四川卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/xmtv.m3u8"  class='rowtop'>厦门卫视</a>
-
-<a href="http://ivi.bupt.edu.cn/hls/xjtv.m3u8"  class='rowtop1'>新疆卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/yntv.m3u8"  class='rowtop'>云南卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/jxtv.m3u8"  class='rowtop1'>江西卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/dntv.m3u8"  class='rowtop'>东南卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/gztv.m3u8"  class='rowtop1'>贵州卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/nxtv.m3u8"  class='rowtop'>宁夏卫视</a>
-<a href="http://ivi.bupt.edu.cn/hls/gstv.m3u8"  class='rowtop1'>甘肃卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/bttv.m3u8"  class='rowtop'>兵团卫视</a>
-
-    <a href="http://ivi.bupt.edu.cn/hls/lytv.m3u8"  class='rowtop1'>旅游卫视</a>
-
-
-
-</body>
+		</script>
+	</body>
 </html>
