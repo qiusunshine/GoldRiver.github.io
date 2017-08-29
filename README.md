@@ -1,2 +1,1 @@
-# GoldRiver.github.io
-blog
+收藏关于恋爱表白等内容以及学习网页的练手
