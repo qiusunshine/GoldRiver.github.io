@@ -2,7 +2,7 @@
     {
         "name": "孙林",
         "detail": "熊秋秋，祝你生日快乐！同时也祝你和德银长长久久。",
-        "music": "http://music.163.com/song/439915614/?userid=361277183",
+        "music": "https://c.y.qq.com/v8/playsong.html?songmid=004XzVtI1YsLfx&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "3",
         "head": "http://suo.im/2Ak0WX",
         "img1": "http://suo.im/vfCpS",
@@ -22,7 +22,7 @@
     {
         "name": "蓝勇",
         "detail": "早点和我兄弟结婚，这杯酒都等了好几年了，熊大，生日快乐（｡ò ∀ ó｡）",
-        "music": "http://music.163.com/song/485741857/?userid=361277183",
+        "music": "https://c.y.qq.com/v8/playsong.html?songmid=004XzVtI1YsLfx&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "1",
         "head": "http://suo.im/3yExFq",
         "img1": "http://suo.im/17mDvm",
