@@ -31,11 +31,21 @@
     },
     {
         "name": "蓝勇",
-        "detail": "早点和我兄弟结婚，这杯酒都等了好几年了，熊大，生日快乐（｡ò ∀ ó｡）",
+        "detail": "早点和我兄弟结婚，这杯酒都等了好几年了，熊大，生日快乐!",
         "music": "https://c.y.qq.com/v8/playsong.html?songmid=004XzVtI1YsLfx&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "1",
         "head": "http://suo.im/3yExFq",
         "img1": "http://suo.im/17mDvm",
+        "img2": "",
+        "img3": ""
+    }, 
+      {
+        "name": "何宇",
+        "detail": "点右上角看何二妹给猫猫的信",
+        "music": "http://viewer.shouzhangapp.com/H5share/1090579_9YA9USKRZY?app=shouzhang",
+        "type": "1",
+        "head": "http://suo.im/3iOkjL",
+        "img1": "http://suo.im/iLeyo",
         "img2": "",
         "img3": ""
     }
