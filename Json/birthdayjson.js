@@ -2,7 +2,7 @@
     {
         "name": "孙林",
         "detail": "熊秋秋，祝你生日快乐！同时也祝你和德银长长久久。",
-        "music": "https://c.y.qq.com/v8/playsong.html?songmid=004XzVtI1YsLfx&ADTAG=myqq&from=myqq&channel=10007100",
+        "music": "https://c.y.qq.com/v8/playsong.html?songmid=000LBcVm0d9raf&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "3",
         "head": "http://suo.im/2Ak0WX",
         "img1": "http://suo.im/vfCpS",
