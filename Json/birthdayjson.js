@@ -22,7 +22,7 @@
     {
         "name": "蓝勇",
         "detail": "早点和我兄弟结婚，这杯酒都等了好几年了，熊大，生日快乐（｡ò ∀ ó｡）",
-        "music": "nomusic",
+        "music": "http://music.163.com/song/485741857/?userid=361277183",
         "type": "1",
         "head": "http://suo.im/3yExFq",
         "img1": "http://suo.im/17mDvm",
