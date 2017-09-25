@@ -18,5 +18,15 @@
         "img1": "http://suo.im/4xgan4",
         "img2": "http://suo.im/3s53JZ",
         "img3": "http://suo.im/3cAISf"
+    },
+    {
+        "name": "蓝勇",
+        "detail": "早点和我兄弟结婚，这杯酒都等了好几年了，熊大，生日快乐（｡ò ∀ ó｡）",
+        "music": "nomusic",
+        "type": "1",
+        "head": "http://suo.im/3yExFq",
+        "img1": "http://suo.im/17mDvm",
+        "img2": "",
+        "img3": ""
     }
 ]
