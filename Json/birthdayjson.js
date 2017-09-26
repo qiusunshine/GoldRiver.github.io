@@ -5,6 +5,7 @@
         "music": "https://c.y.qq.com/v8/playsong.html?songmid=000LBcVm0d9raf&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "3",
         "head": "http://suo.im/2QaeKv",
+        "qq": "1596889407",
         "img1": "http://suo.im/21edtd",
         "img2": "http://suo.im/1e4jAe",
         "img3": "http://suo.im/44za1k"
@@ -15,6 +16,7 @@
         "music": "https://c.y.qq.com/v8/playsong.html?songmid=000LBcVm0d9raf&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "3",
         "head": "http://suo.im/2Ak0WX",
+        "qq": "1649803158",
         "img1": "http://suo.im/vfCpS",
         "img2": "http://suo.im/2iYo2q",
         "img3": "http://suo.im/2CnutI"
@@ -25,6 +27,7 @@
         "music": "nomusic",
         "type": "3",
         "head": "http://suo.im/2Z5D4a",
+        "qq": "1303701792",
         "img1": "http://suo.im/4xgan4",
         "img2": "http://suo.im/3s53JZ",
         "img3": "http://suo.im/3cAISf"
@@ -35,6 +38,7 @@
         "music": "https://c.y.qq.com/v8/playsong.html?songmid=004XzVtI1YsLfx&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "1",
         "head": "http://suo.im/3yExFq",
+        "qq": "2501552205",
         "img1": "http://suo.im/17mDvm",
         "img2": "",
         "img3": ""
@@ -45,6 +49,7 @@
         "music": "http://viewer.shouzhangapp.com/H5share/1090579_9YA9USKRZY?app=shouzhang",
         "type": "1",
         "head": "http://suo.im/37ncuL",
+        "qq": "729585205",
         "img1": "http://suo.im/iLeyo",
         "img2": "",
         "img3": ""
@@ -55,6 +60,7 @@
         "music": "nomusic",
         "type": "3",
         "head": "http://suo.im/4ldkKB",
+        "qq": "1548270653",
         "img1": "http://suo.im/4Dm9yv",
         "img2": "http://suo.im/3fuSh",
         "img3": "http://suo.im/4ldkKB"
@@ -65,6 +71,7 @@
         "music": "https://c.y.qq.com/v8/playsong.html?songmid=002BIjxb1Erg6e&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "3",
         "head": "http://suo.im/2E1G3c",
+        "qq": "844566030",
         "img1": "http://suo.im/1VYanX",
         "img2": "http://suo.im/dQ6rC",
         "img3": "http://suo.im/2Y03zw"
@@ -75,6 +82,7 @@
         "music": "nomusic",
         "type": "2",
         "head": "http://suo.im/2bsb38",
+        "qq": "2367699568",
         "img1": "",
         "img2": "",
         "img3": ""
@@ -85,6 +93,7 @@
         "music": "nomusic",
         "type": "3",
         "head": "http://suo.im/1OaNng",
+        "qq": "1822450579",
         "img1": "http://suo.im/4kmolX",
         "img2": "http://suo.im/2JKVLM",
         "img3": "http://suo.im/3fpe25"
@@ -95,6 +104,7 @@
         "music": "nomusic",
         "type": "1",
         "head": "http://suo.im/3OMxu",
+        "qq": "2907232574",
         "img1": "http://suo.im/4cQNeN",
         "img2": "",
         "img3": ""
