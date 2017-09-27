@@ -112,7 +112,7 @@
     {
         "name": "杜芳清",
         "detail": "生日快乐哈，祝你和你家何先生毕业就结婚，给我们省笔红包钱\n--2017/09/27",
-        "music": "nomusic",
+        "music": "https://c.y.qq.com/v8/playsong.html?songmid=004673lC2KA9z5&ADTAG=myqq&from=myqq&channel=10007100",
         "type": "3",
         "head": "https://coding.net/u/QiuSunshine/p/HeartTree/git/raw/master/dufangqinghead.jpg",
         "qq": "1924718191",
